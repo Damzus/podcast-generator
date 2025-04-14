@@ -1,17 +1,21 @@
 name: "Podcast Generator"
-auther: "Saurab Nand"
+author: "Saurab Nand"
 description: "Generate a podcast episode from a given topic using OpenAI's GPT-3.5-turbo model."
-runs: 
+
+runs:
   using: "docker"
   image: "Dockerfile"
-branding: 
+
+branding:
   icon: "git-branch"
-  color: "red
+  color: "red"
+
 inputs:
-  email: 
+  email:
     description: "Email address to send the podcast episode to."
     required: true
-    default: ${{ github.actor }}@localhost
-    name: 
+    default: "${{ github.actor }}@localhost"
+  name:
+    description: "Name of the person requesting the podcast."
     required: true
-    default: ${{ github.actor }}
+    default: "${{ github.actor }}"
